@@ -183,3 +183,6 @@
 </section>
 
 <!-- END OF CAREER SECTION -->
+
+<?php get_template_part( 'template-parts/content', 'apprentice-section' );?>
+<!-- END OF APPRENTICE  -->
