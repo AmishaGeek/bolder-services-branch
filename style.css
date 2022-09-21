@@ -1383,7 +1383,8 @@ input[type="number"]::-webkit-outer-spin-button {
     --primary-color: #2E3190;
     --secondary-color: #EC1C24;
     --dark-color: #060305;
-    --common-color: #777777;
+    --common-color: #6B6E77;
+    --light-bg: #ECEDEF;
     --white-color: #ffffff;
     --black-color: #000000;
     --red-color: #ff0000;
@@ -1413,8 +1414,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: bold;
-    color: var(--dark-color);
+    color: var(--secondary-color);
     font-family: var(--title-font);
 }
 
@@ -1435,19 +1435,16 @@ a:hover {
 .h1-title {
     font-size: 60px;
     line-height: 70px;
-    font-weight: 900;
-    color: var(--dark-color);
+    color: var(--white-color);
     text-transform: uppercase;
-    margin-bottom: 26px;
+    margin-bottom: 45px;
 }
 
 .h2-title {
     font-size: 44px;
-    line-height: 54px;
-    font-weight: 900;
-    color: var(--primary-color);
+    line-height: 1.2;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 28px;
 }
 
 .h3-title {
@@ -1637,25 +1634,42 @@ a:hover {
 .woocommerce input.button {
     width: 200px;
     height: 54px;
-    background: var(--dark-color);
-    border: 2px solid var(--dark-color);
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3px;
+    border-radius: 0;
     -webkit-appearance: none;
     font-size: 16px;
     line-height: 20px;
     color: var(--white-color);
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
     padding: 5px;
     cursor: pointer;
+    text-transform: uppercase;
     outline: none !important;
     transition: 0.3s;
     overflow: hidden;
     position: relative;
     z-index: 2;
+}
+
+.banner-btn .sec-btn+.sec-btn {
+    margin-left: 26px;
+}
+
+.sec-btn.btn-transparent {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+
+.sec-btn.btn-transparent-1 {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: transparent;
 }
 
 .sec-btn:hover,
@@ -1682,6 +1696,18 @@ a:hover {
     left: 50%;
     transform: translate(-50%);
     width: auto;
+}
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sec-1920 {
+    /* width: 1920px; */
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
 }
 
 
@@ -2160,24 +2186,24 @@ button.close:hover {
     -webkit-text-stroke: .8px #1482f0
 }
 
-.sticky-header .main-nav {
+.sticky_header .main-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%
 }
 
-.sticky-header .main-navigation .logo {
+.sticky_header .main-navigation .logo {
     margin: -60px 54px 0 73px;
     padding: 20px 10px 0
 }
 
-.sticky-header .main-navigation {
+.sticky_header .main-navigation {
     height: 80px
 }
 
-.sticky-header .main-navigation .logo:after,
-.sticky-header .main-navigation .logo:before {
+.sticky_header .main-navigation .logo:after,
+.sticky_header .main-navigation .logo:before {
     position: absolute;
     content: "";
     top: 30px;
@@ -2187,7 +2213,44 @@ button.close:hover {
     background: #1482f0;
 }
 
-.sticky-header .main-navigation .logo:before {
+.sticky_header .main-navigation .logo:before {
+    left: auto;
+    right: 10px;
+    background: #2a8df1;
+}
+
+.header-top-bar .phone-link {
+    margin-right: 10px
+}
+
+.sticky_header .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+.sticky_header .main-navigation .logo {
+    margin: -60px 54px 0 73px;
+    padding: 20px 10px 0
+}
+
+.sticky_header .main-navigation {
+    height: 80px
+}
+
+.sticky_header .main-navigation .logo:after,
+.sticky_header .main-navigation .logo:before {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background: #1482f0;
+}
+
+.sticky_header .main-navigation .logo:before {
     left: auto;
     right: 10px;
     background: #2a8df1;
@@ -2199,6 +2262,141 @@ button.close:hover {
 
 
 /*==========Header CSS End==========*/
+
+
+/*==========Banner CSS Start==========*/
+
+.main-banner {
+    position: relative;
+    padding: 410px 0 245px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-clip-path: polygon(100% 0, 100% 659px, 50% 100%, 0 659px, 0 0);
+    clip-path: polygon(100% 0, 100% 659px, 50% 100%, 0 659px, 0 0);
+}
+
+.main-banner:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d1727;
+    opacity: .8
+}
+
+.banner-content {
+    max-width: 1040px;
+    margin: auto;
+}
+
+.banner-text p {
+    font-size: 25px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+}
+
+
+/*==========Banner CSS End==========*/
+
+
+/*==========Purpose CSS Start==========*/
+
+.purpose {
+    position: relative;
+    background-color: var(--dark-color);
+    padding: 60px 0 60px 0;
+}
+
+.purpose:before {
+    content: "";
+    position: absolute;
+    width: 1230px;
+    height: 126px;
+    background-image: url(assets/images/divider-1.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 5;
+}
+
+.purpose-content {
+    max-width: 585px;
+    margin: auto;
+}
+
+.purpose-content p {
+    margin-bottom: 34px;
+}
+
+
+/*==========Purpose CSS End==========*/
+
+
+/*==========Main Services CSS Start==========*/
+
+.main-service-sec {
+    position: relative;
+    margin: -172px 0 0;
+    -webkit-clip-path: polygon(50% 172px, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 172px, 100% 0, 100% 100%, 0 100%, 0 0);
+    z-index: 3;
+}
+
+.service-row.even .service-content {
+    position: relative;
+    padding: 62px 0 0 170px;
+}
+
+.service-img-wp {
+    position: relative;
+    width: 100%;
+    height: 921px;
+    left: 15px;
+}
+
+.service-img {
+    display: block;
+    float: right;
+    width: calc(100% + 28vw);
+    height: 100%;
+}
+
+.service-row.odd {
+    background: var(--light-bg);
+    position: relative;
+    -webkit-clip-path: polygon(50% 0, 100% 155px, 100% 935px, 50% 100%, 0 935px, 0 155px);
+    clip-path: polygon(50% 0, 100% 155px, 100% 935px, 50% 100%, 0 935px, 0 155px);
+    margin: -155px 0 0;
+    z-index: 1;
+}
+
+.service-row.odd .service-img-wp {
+    height: 1100px;
+}
+
+.service-row.odd .service-img-wp {
+    left: -15px;
+}
+
+.service-row.odd .service-img {
+    float: left;
+}
+
+.service-row.odd .service-content {
+    padding: 62px 170px 0 0;
+}
+
+
+/*==========Main Services CSS End==========*/
 
 
 /*==========Footer CSS Start==========*/
