@@ -68,7 +68,7 @@
                     <div class="service-content">
                         <h2 class="h2-title">Cooling</h2>
                         <div class="service-text">
-                            <p>A flooring solution that’s easy to implement and meets your every requirement? You’ve come to the right place! At Tommy D’s, we offer a wide variety of flooring options, from carpeting to laminate to luxury vinyl.</p>
+                            <p>In those sweltering summer months, your comfort is our top priority. Expert cooling system installation, repair, and maintenance. Full functionality and aesthetics guaranteed for every piece of equipment!</p>
                             <a href="#" class="sec-btn btn-transparent-1" title="Read More">Read More</a>
                         </div>
                     </div>
@@ -82,3 +82,104 @@
         </div>
     </section>
 </div>
+
+<!-- END OF MAIN SERVICES -->
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sec-title text-center white-text">
+                    <h2 class="h2-title">gallery</h2>
+                </div>
+                <div class="gallery-slider">
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                    <div class="gallery-img">
+                        <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/cooling-img.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- END OF GALLERY SECTION -->
+
+<section class="career-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="career-img">
+                    <div class="bg-img" style="background-image: url('<?php echo home_url() ?>/wp-content/uploads/2022/09/career-img.jpg');"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="career-content">
+                    <h2 class="h2-title">Careers</h2>
+                    <div class="career-text">
+                        <p>Interested in joining the Bolder Services team? Just fill out this form and send in your application.</p>
+                        <a href="#" class="sec-btn" title="Apply Now">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- END OF CAREER SECTION -->

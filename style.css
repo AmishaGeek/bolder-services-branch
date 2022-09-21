@@ -1699,6 +1699,8 @@ a:hover {
 }
 
 .bg-img {
+    height: 100%;
+    width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1816,9 +1818,15 @@ button.close:hover {
 }
 
 .slick-dots li {
-    width: auto;
-    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 24px;
     margin: 0 15px 0 0;
+    clip-path: polygon(51% 0, 100% 25%, 100% 77%, 52% 100%, 0 78%, 0 25%);
+    background-color: var(--white-color);
+    z-index: 2;
 }
 
 .slick-dots li:last-child {
@@ -1826,12 +1834,28 @@ button.close:hover {
 }
 
 .slick-dots li button {
-    width: 25px;
-    height: 5px;
-    background: var(--common-color);
+    position: relative;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: var(--dark-color);
     border: none;
     outline: none;
     padding: 0;
+    clip-path: polygon(51% 0, 100% 25%, 100% 77%, 52% 100%, 0 78%, 0 25%);
+    transition: 0.3s;
+}
+
+.slick-dots li:before {
+    content: '';
+    position: absolute;
+    height: calc(100% - 9px);
+    width: calc(100% - 9px);
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(51% 0, 100% 25%, 100% 77%, 52% 100%, 0 78%, 0 25%);
+    z-index: 1;
     transition: 0.3s;
 }
 
@@ -1839,9 +1863,9 @@ button.close:hover {
     display: none;
 }
 
-.slick-dots li.slick-active button,
-.slick-dots li button:hover {
-    background: var(--primary-color);
+.slick-dots li.slick-active:before,
+.slick-dots li:hover:before {
+    background: var(--white-color);
 }
 
 .slick-initialized .slick-slide {
@@ -2268,13 +2292,14 @@ button.close:hover {
 
 .main-banner {
     position: relative;
-    padding: 410px 0 245px;
+    padding: 410px 0 265px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     -webkit-clip-path: polygon(100% 0, 100% 659px, 50% 100%, 0 659px, 0 0);
-    clip-path: polygon(100% 0, 100% 659px, 50% 100%, 0 659px, 0 0);
+    clip-path: polygon(100% 0, 100% 845px, 50% 100%, 0 845px, 0 0);
+    z-index: 5;
 }
 
 .main-banner:after {
@@ -2310,19 +2335,20 @@ button.close:hover {
 .purpose {
     position: relative;
     background-color: var(--dark-color);
-    padding: 60px 0 60px 0;
+    padding: 295px 0 150px 0;
+    margin-top: -170px;
 }
 
 .purpose:before {
     content: "";
     position: absolute;
     width: 1230px;
-    height: 126px;
+    height: 146px;
     background-image: url(assets/images/divider-1.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    top: 60px;
+    top: 65px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 5;
@@ -2345,15 +2371,20 @@ button.close:hover {
 
 .main-service-sec {
     position: relative;
-    margin: -172px 0 0;
+    /* background-color: var(--white-color); */
+    margin-top: -200px;
     -webkit-clip-path: polygon(50% 172px, 100% 0, 100% 100%, 0 100%, 0 0);
-    clip-path: polygon(50% 172px, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(50% 160px, 100% 0, 100% 100%, 0 100%, 0 0);
     z-index: 3;
 }
 
 .service-row.even .service-content {
     position: relative;
     padding: 62px 0 0 170px;
+}
+
+.service-text .sec-btn {
+    margin-top: 45px;
 }
 
 .service-img-wp {
@@ -2363,6 +2394,20 @@ button.close:hover {
     left: 15px;
 }
 
+.service-row.even::after {
+    content: "";
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 570px;
+    height: 69px;
+    background-image: url(assets/images/divider-2.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+}
+
 .service-img {
     display: block;
     float: right;
@@ -2370,13 +2415,46 @@ button.close:hover {
     height: 100%;
 }
 
+.service-row.even {
+    position: relative;
+    background-color: var(--white-color);
+}
+
 .service-row.odd {
     background: var(--light-bg);
     position: relative;
     -webkit-clip-path: polygon(50% 0, 100% 155px, 100% 935px, 50% 100%, 0 935px, 0 155px);
-    clip-path: polygon(50% 0, 100% 155px, 100% 935px, 50% 100%, 0 935px, 0 155px);
-    margin: -155px 0 0;
-    z-index: 1;
+    clip-path: polygon(50% 0, 100% 165px, 100% 935px, 50% 100%, 0 935px, 0 165px);
+    margin: -170px 0 0;
+    z-index: 5;
+}
+
+.service-row.even:before {
+    content: "";
+    position: absolute;
+    bottom: 63px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1230px;
+    height: 126px;
+    background-image: url(assets/images/service-up.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 6;
+}
+
+.service-row.odd:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 1230px;
+    height: 126px;
+    background-image: url(assets/images/service-down.svg);
+    background-size: cover;
+    background-position: center;
+    z-index: 6;
 }
 
 .service-row.odd .service-img-wp {
@@ -2397,6 +2475,66 @@ button.close:hover {
 
 
 /*==========Main Services CSS End==========*/
+
+
+/*==========Gallery CSS Start==========*/
+
+.gallery-img {
+    height: 205px;
+    padding-right: 30px;
+    margin-bottom: 25px;
+}
+
+.gallery-section {
+    position: relative;
+    background-color: var(--dark-color);
+    margin-top: -170px;
+    padding-top: 310px;
+    padding-bottom: 210px;
+    clip-path: polygon(100% 0, 100% 88%, 51% 100%, 0 88%, 0 0);
+    z-index: 2;
+}
+
+.gallery-slider {
+    padding-top: 30px;
+}
+
+.gallery-slider .slick-dots {
+    bottom: -45px;
+}
+
+
+/*==========Gallery CSS End==========*/
+
+
+/*==========Career Css Start==========*/
+
+.career-img {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    left: 30px;
+}
+
+.career-img .bg-img {
+    display: block;
+    float: right;
+    width: calc(100% + 25vw);
+    height: 100%;
+}
+
+.career-section {
+    position: relative;
+    z-index: 1;
+    margin-top: -165px;
+}
+
+.career-content {
+    padding: 310px 90px 0 85px;
+}
+
+
+/*==========Career Css End==========*/
 
 
 /*==========Footer CSS Start==========*/

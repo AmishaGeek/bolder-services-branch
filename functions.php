@@ -206,3 +206,12 @@ function change_html_custom_logo() {
         );
     return $html;   
 }
+
+// define the wp_nav_menu_objects callback 
+function filter_wp_nav_menu_objects( $sorted_menu_items, $args ) { 
+    // make filter magic happen here... 
+    return $sorted_menu_items; 
+}; 
+
+// add the filter 
+add_filter( 'wp_nav_menu_objects', 'filter_wp_nav_menu_objects', 10, 2 ); 
