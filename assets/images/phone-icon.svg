@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.997" height="30" viewBox="0 0 29.997 30">
+  <g id="phone-icon-2" transform="translate(-396 -15)">
+    <path id="Path_197" data-name="Path 197" d="M2103-4005h20v20l-10,10h-20v-20Z" transform="translate(-1697 4020)" fill="#fff"/>
+    <g id="phone" transform="translate(405 24)">
+      <path id="Path_178" data-name="Path 178" d="M12.038.59,9.5,0a.59.59,0,0,0-.672.339L7.655,3.078a.585.585,0,0,0,.168.684L9.3,4.973A9.05,9.05,0,0,1,4.976,9.3L3.765,7.821a.585.585,0,0,0-.684-.168L.346,8.824A.593.593,0,0,0,0,9.5l.586,2.54a.586.586,0,0,0,.571.454,11.329,11.329,0,0,0,11.33-11.33A.585.585,0,0,0,12.038.59Z" transform="translate(0.01 0.011)" fill="#2e3190"/>
+    </g>
+  </g>
+</svg>
