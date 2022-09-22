@@ -190,7 +190,7 @@ jQuery(document).ready(function($) {
     });
 
     /* Mobile Menu JS */
-    jQuery("#menu-item-21 a").first().attr('href', 'javascript:void(0);');
+    // jQuery("#menu-item-21 a").first().attr('href', 'javascript:void(0);');
     jQuery("#main-menu .menu-item a").click(function() {
         jQuery("#site-navigation").removeClass("toggled");
     });

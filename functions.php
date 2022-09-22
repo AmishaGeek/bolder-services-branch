@@ -210,6 +210,14 @@ function change_html_custom_logo() {
 // define the wp_nav_menu_objects callback 
 function filter_wp_nav_menu_objects( $sorted_menu_items, $args ) { 
     // make filter magic happen here... 
+	foreach ($sorted_menu_items as $key => $value) {
+		$url = $value->url;
+		if (strpos($url,'#') !== false) {
+			$url = site_url().'/'. $url;
+			$sorted_menu_items[$key]->url = $url;
+		}
+	}
+
     return $sorted_menu_items; 
 }; 
 
