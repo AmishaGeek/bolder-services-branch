@@ -13,46 +13,50 @@
 ?>
 
 <footer id="colophon" class="site-footer">
-	<div class="top-footer">
+	<div class="top-footer sec-1920">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="footer-content text-center white-text">						
+					<div class="footer-content text-center white-text">
 						<div class="footer-tag-line">
-							<p>Excellence in HVAC installation and maintenance, helping each customer make an informed decision. 24/7 emergency service available.</p>
+							<?php the_field('footer_content', 'option'); ?>
 						</div>
 						<div class="site-contact">
 							<ul>
 								<li>
-									<a href="">
+									<?php
+									$phone = get_field('phone_number', 'option');
+									$phone_link = preg_replace("/[^0-9]/", "", $phone);
+									?>
+									<a href="tel:<?php echo $phone_link; ?>" title="Phone">
 										<span class="icon">
 											<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/footer-call.svg" width="15" height="15" alt="Call Icon">
 										</span>
 										<div class="contact-text">
 											<span>Phone</span>
-											<span class="callus">(608) 448-3769</span>
+											<span class="callus"><?php echo $phone; ?></span>
 										</div>
 									</a>
 								</li>
 								<li>
-									<a href="mailto:info@bolderservices.com">
+									<a href="mailto:<?php the_field('email', 'option') ?>" title="<?php the_field('email', 'option') ?>">
 										<span class="icon">
 											<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/footer-mail.svg" width="15" height="15" alt="Mail Icon">
 										</span>
 										<div class="contact-text">
 											<span>Email</span>
-											<span class="site-mail">info@bolderservices.com</span>
+											<span class="site-mail"><?php the_field('email', 'option') ?></span>
 										</div>
 									</a>
 								</li>
 								<li>
-									<a href="https://goo.gl/maps/c6CdaKmGSmXHFKTq7" target="_blank">
+									<a href="<?php the_field('address_link', 'option'); ?>" target="_blank" title="<?php the_field('address', 'option') ?>">
 										<span class="icon">
-										<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/footer-location.svg" width="13" height="17" alt="Location Icon">
+											<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/footer-location.svg" width="13" height="17" alt="Location Icon">
 										</span>
 										<div class="contact-text">
 											<span>Address</span>
-											<span class="site-mail">1055 Lake St. Baraboo, WI 53913</span>
+											<span class="site-mail"><?php the_field('address', 'option') ?></span>
 										</div>
 									</a>
 								</li>
@@ -78,7 +82,7 @@
 							</ul>
 						</div>
 						<div class="footer-other-link">
-							<p>Web Design, SEO, & Online Marketing by <a href="https://www.dotcomdesign.com" target="_blank" title="Dotcom Design" class="dotcom-link">Dotcom Design</a></p>
+							<p>Website Design, SEO, & Online Marketing by <a href="https://www.dotcomdesign.com" target="_blank" title="Dotcom Design" class="dotcom-link">Dotcom Design</a></p>
 						</div>
 					</div>
 				</div>
@@ -87,12 +91,20 @@
 	</div>
 	<!-- Footer End -->
 </footer>
+<!-- CTA Button -->
+<div class="cta-btn">
+	<a href="tel:<?php echo $phone_link; ?>" class="cta-wp sec-btn" title="Call <?php echo $phone; ?>">
+		<span>Call</span> <span class="callus"><?php echo $phone; ?></span>
+	</a>
+</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
+
+
 <!-- Careers Form -->
-<div class="modal fade" id="careers">
+<!-- <div class="modal fade" id="career">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -103,6 +115,25 @@
 				<p>Fill out the form below and attach your resume and we will get back to you!</p>
 				<div class="contact-form">
 					<?php echo do_shortcode('[contact-form-7 id="49" title="Apply Now"]'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="modal fade common-popup" id="career">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="popup-title">
+				<h2 class="h2-title">Schedule an <span>Estimate</span></h2>
+				<button type="button" class="close close-popup" data-dismiss="modal"><i class="fas fa-times"></i></button>
+			</div>
+			<div class="common-popup-overflow">
+				<div class="common-popup-text" data-simplebar="">
+					<p>Fill out the form below and attach your resume and we will get back to you!</p>
+					<div class="contact-form">
+						<?php echo do_shortcode('[contact-form-7 id="49" title="Apply Now"]'); ?>
+					</div>
 				</div>
 			</div>
 		</div>

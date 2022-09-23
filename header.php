@@ -25,28 +25,32 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'bolder-services'); ?></a>
+		<a class="skip-link screen-reader-text" href="#primary" title="Skip to content"><?php esc_html_e('Skip to content', 'bolder-services'); ?></a>
 
 		<header id="masthead" class="site-header">
-			<div class="header-top-bar">
+			<div class="header-top-bar for-des">
 				<div class="container">
 					<div class="head-wp">
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="header-top-icon">
-									<a href="tel:608448-3769" title="Call to (608) 448-3769">
+									<?php
+										$phone = get_field('phone_number','option');
+										$phone_link = preg_replace("/[^0-9]/","",$phone);
+									?>
+									<a href="tel:<?php echo $phone_link; ?>" title="Call to <?php echo $phone; ?>">
 										<span>
-											<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/phone-icon.svg" width="30" height="30" alt="phone icon">
+											<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/phone-icon.svg" width="30" height="30" alt="Phone icon">
 										</span>
-										<span class="callus">(608) 448-3769</span>
+										<span class="callus"><?php echo $phone; ?></span>
 									</a>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="header-top-icon text-right">
-									<a href="https://www.facebook.com/Absolutefr/" title="Follow On Facebook" target="_blank">
+									<a href="<?php the_field('facebook_link','option'); ?>" title="Follow On Facebook" target="_blank">
 										<span>
-											<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/facebook-icon.svg" width="30" height="30" alt="phone icon">
+											<img src="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/images/facebook-icon.svg" width="30" height="30" alt="Facebook icon">
 										</span>
 									</a>
 								</div>

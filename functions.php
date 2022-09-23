@@ -207,19 +207,15 @@ function change_html_custom_logo() {
     return $html;   
 }
 
-// define the wp_nav_menu_objects callback 
-function filter_wp_nav_menu_objects( $sorted_menu_items, $args ) { 
-    // make filter magic happen here... 
-	foreach ($sorted_menu_items as $key => $value) {
-		$url = $value->url;
-		if (strpos($url,'#') !== false) {
-			$url = site_url().'/'. $url;
-			$sorted_menu_items[$key]->url = $url;
+// it's working only menu custom link and link have started with #
+function change_menu_URL($items){
+	if(!is_front_page()){
+		foreach ($items as $key => $item) {
+			if ($item->object == 'custom' && substr($item->url, 0, 1) == '#') {
+				$item->url = site_url() . $item->url;
+			}
 		}
 	}
-
-    return $sorted_menu_items; 
-}; 
-
-// add the filter 
-add_filter( 'wp_nav_menu_objects', 'filter_wp_nav_menu_objects', 10, 2 ); 
+	return $items;
+}
+add_filter('wp_nav_menu_objects', 'change_menu_URL');

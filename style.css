@@ -629,7 +629,7 @@ textarea {
 }
 
 .head-wp {
-    padding: 0 80px;
+    padding: 0 70px;
 }
 
 .main-navigation ul {
@@ -677,7 +677,7 @@ textarea {
 .main-navigation li {
     float: left;
     position: relative;
-    padding: 0 17px;
+    padding: 0 20px;
     height: 100%;
 }
 
@@ -1100,13 +1100,13 @@ select {
     height: 46px;
     border: none;
     outline: none !important;
-    padding: 0 15px;
+    padding: 0 30px;
     font-size: 16px;
     line-height: 26px;
     color: var(--dark-color);
     background: var(--white-color);
     -webkit-appearance: none;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 select,
@@ -1120,7 +1120,7 @@ select.form-input {
 .form-input.wpcf7-textarea {
     height: 120px;
     resize: none;
-    padding: 15px;
+    padding: 16px 30px;
     display: block;
 }
 
@@ -1392,7 +1392,7 @@ input[type="number"]::-webkit-outer-spin-button {
     --white-color: #ffffff;
     --black-color: #000000;
     --red-color: #ff0000;
-    --input-color: #555555;
+    --input-color: rgb(6 3 5 / 30%);
     --gradient-color: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
     --body-font: 'Open Sans';
@@ -1677,6 +1677,16 @@ a:hover {
     background: transparent;
 }
 
+.sec-btn.blue-btn {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.sec-btn.blue-btn:hover {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
 .sec-btn:hover,
 .woocommerce #respond input#submit:hover,
 .woocommerce a.button:hover,
@@ -1712,9 +1722,9 @@ a:hover {
 }
 
 .sec-1920 {
-    /* width: 1920px; */
-    /* left: 50%; */
-    /* transform: translate(-50%, 0); */
+    width: 1920px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 
@@ -1771,7 +1781,7 @@ button.close {
 
 button.close:hover {
     background: var(--secondary-color);
-    color: var(--dark-color);
+    color: var(--white-color);
 }
 
 .modal-dialog {
@@ -1804,6 +1814,56 @@ button.close:hover {
 
 .common-popup-text::-webkit-scrollbar-track {
     background: #cccccc;
+}
+
+#career .form-input {
+    border: 1px solid var(--input-color);
+}
+
+#career .wpcf7-form-control-wrap {
+    margin-bottom: 20px;
+}
+
+.form-input-file input[type=file] {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1
+}
+
+.form-input-file {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    height: 100px;
+    background-color: var(--white-color);
+    border: 1px dashed #bdbcbc
+}
+
+.form-input-file .wpcf7-form-control-wrap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0
+}
+
+.icon-label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.form-input-file label {
+    font-size: 11px;
+    line-height: 1;
+    margin: 0
 }
 
 
@@ -2110,7 +2170,7 @@ button.close:hover {
 /*==========Header CSS Start==========*/
 
 .site-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -2119,7 +2179,7 @@ button.close:hover {
 
 .header-top-bar {
     background: var(--primary-color);
-    padding: 15px 0;
+    /* padding: 15px 0; */
     height: 60px;
     display: flex;
     align-items: center
@@ -2150,7 +2210,7 @@ button.close:hover {
     width: 370px;
     height: 190px;
     padding: 0;
-    margin: -55px 50px 0 50px;
+    margin: -55px 50px 0 40px;
     transition: .3s
 }
 
@@ -2192,18 +2252,18 @@ button.close:hover {
     content: "";
     position: absolute;
     top: 0;
-    left: -35px;
-    width: 90px;
+    left: -105px;
+    width: 170px;
     height: 100%;
     background: var(--dark-color);
-    transform: skewX(30deg);
+    transform: skewX(45deg);
     z-index: -1
 }
 
 .main-navigation:before {
     left: auto;
-    right: -35px;
-    transform: skewX(-30deg)
+    right: -105px;
+    transform: skewX(-45deg);
 }
 
 .main-navigation a:hover:before {
@@ -2302,8 +2362,8 @@ button.close:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    -webkit-clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
-    clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    -webkit-clip-path: polygon(100% 0, 100% 83.5%, 50% 100%, 0 83.5%, 0 0);
+    clip-path: polygon(100% 0, 100% 83.5%, 50% 100%, 0 83.5%, 0 0);
     z-index: 5;
 }
 
@@ -2315,7 +2375,7 @@ button.close:hover {
     width: 100%;
     height: 100%;
     background: #0d1727;
-    opacity: .8
+    opacity: 0.8;
 }
 
 .banner-content {
@@ -2360,10 +2420,31 @@ button.close:hover {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    top: 65px;
+    top: 63px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 5;
+}
+
+.purpose-bg:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
+    opacity: 0.91;
+}
+
+.purpose-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
+    background-blend-mode: luminosity;
 }
 
 .purpose-content {
@@ -2495,7 +2576,7 @@ button.close:hover {
 
 .service-row.even .service-content {
     position: relative;
-    padding: 62px 0 0 170px;
+    padding: 0 70px 0 100px;
 }
 
 .service-text .sec-btn {
@@ -2505,11 +2586,11 @@ button.close:hover {
 .service-img-wp {
     position: relative;
     width: 100%;
-    height: 921px;
+    height: 1060px;
     left: 15px;
 }
 
-.service-row.even::after {
+.service-row.even:after {
     content: "";
     position: absolute;
     top: 110px;
@@ -2537,6 +2618,7 @@ button.close:hover {
 .service-row.even {
     position: relative;
     background-color: var(--white-color);
+    padding-bottom: 0;
 }
 
 .service-row.odd {
@@ -2566,7 +2648,7 @@ button.close:hover {
 .site-wrap-content:after {
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: -2px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 1230px;
@@ -2601,7 +2683,8 @@ button.close:hover {
 
 .gallery-img {
     height: 205px;
-    padding-right: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
     margin-bottom: 25px;
 }
 
@@ -2651,7 +2734,7 @@ button.close:hover {
 }
 
 .career-content {
-    padding: 310px 90px 0 85px;
+    padding: 310px 105px 0 70px;
 }
 
 .apprentice-content {
@@ -2700,7 +2783,7 @@ button.close:hover {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    bottom: 47px;
+    bottom: -63px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 5;
@@ -2736,7 +2819,7 @@ button.close:hover {
 .copy-right p,
 .footer-other-link p {
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.4;
     margin-bottom: 0;
     color: var(--light-color);
 }
@@ -2876,11 +2959,15 @@ button.close:hover {
     z-index: 2;
 }
 
-.footer-branding {
+.page-id-23 .site-footer {
+    margin-top: -220px;
+}
+
+.site-branding.footer-branding {
     position: relative;
     text-align: center;
     top: 90px;
-    margin: 0 0 0 0;
+    margin: 0;
     /* bottom: -220px; */
     /* left: 50%; */
     /* transform: translate(-50%, 0); */
@@ -3033,12 +3120,57 @@ button.close:hover {
     padding-bottom: 235px;
 }
 
+
+/*========== Inner page CSS end ==========*/
+
+
+/*==========Contact Us Start==========*/
+
+.contact-us-banner .banner-content.inner-banner-content {
+    text-align: left;
+    margin: 0;
+}
+
+.contact-us-banner .site-contact ul {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-us-banner .site-contact ul li {
+    margin-bottom: 28px;
+}
+
+.contact-us-banner .site-contact ul li:last-child {
+    margin: 0;
+}
+
+.contact-us-banner .inner-banner-content .banner-text {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.main-banner.inner-banner.inner-banner-shape.contact-us-banner {
+    padding-bottom: 250px;
+    -webkit-clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+}
+
+.page-id-23 .site-wrap,
 .page-id-57 .site-wrap {
-    clip-path: polygon(100% 0, 100% 100%, 50% 100%, 0 100%, 0 0%);
+    clip-path: unset;
+}
+
+.page-id-23 .site-wrap:before,
+.page-id-57 .site-wrap:before {
+    clip-path: unset;
+    background-image: url(assets/images/service-down.svg);
+    bottom: -16px;
+    z-index: 11;
 }
 
 
-/*========== Inner page CSS end ==========*/
+/*==========Contact Us End==========*/
 
 
 /*========== Thank You Page CSS Start ==========*/
@@ -3096,6 +3228,31 @@ button.close:hover {
     width: 70%;
     height: auto;
 }
+
+
+/*==========404 CSS End==========*/
+
+
+/*==========CTA button Css Start==========*/
+
+.cta-wp {
+    clip-path: polygon(50% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+    padding: 0;
+    height: 83px;
+    width: 216px;
+    padding-top: 20px;
+}
+
+.cta-btn {
+    position: fixed;
+    top: 50%;
+    right: -73px;
+    transform: translate(0, -50%) rotate(-90deg);
+    z-index: 9;
+}
+
+
+/*==========CTA button Css End==========*/
 
 
 /*==========404 CSS End==========*/
@@ -3620,9 +3777,56 @@ a.prev.page-numbers {
     }
 }
 
-@media screen and (max-width: 1499px) {}
+@media screen and (max-width: 1499px) {
+    .main-navigation .logo {
+        margin: -55px 35px 0 25px;
+    }
+    .main-navigation li {
+        padding: 0 17px;
+    }
+    .main-navigation:before {
+        right: -40px;
+    }
+    .main-navigation:after {
+        left: -40px;
+    }
+}
 
-@media screen and (max-width: 1199px) {}
+@media screen and (max-width: 1199px) {
+    .main-navigation .logo {
+        width: 275px;
+        height: 141px;
+        margin: -40px 25px 0 25px;
+    }
+    .main-navigation li {
+        padding: 0 11px;
+    }
+    .head-wp {
+        padding: 0 60px;
+    }
+    .header-top-bar {
+        height: 45px;
+    }
+    .main-navigation {
+        height: 59px;
+    }
+    .main-navigation li a:hover:before,
+    .main-navigation li.current-menu-item a:before {
+        bottom: 8px;
+    }
+    .main-navigation a:before {
+        bottom: 0;
+    }
+    .main-banner {
+        padding: 310px 0 220px;
+    }
+    .service-row.even .service-content {
+        padding: 0 70px;
+    }
+    .service-row.odd .service-content {
+        padding: 62px 100px 0 0;
+    }
+}
 
 @media screen and (max-width: 991px) {
     .for-des,
@@ -3651,10 +3855,11 @@ a.prev.page-numbers {
     }
     .site-header {
         height: 80px;
+        background-color: var(--dark-color);
     }
     .site-header .container {
         max-width: 100%;
-        padding: 0 30px;
+        padding: 0;
     }
     .site-branding {
         position: fixed;
@@ -3678,8 +3883,8 @@ a.prev.page-numbers {
     .menu-toggle span {
         display: block;
         width: 100%;
-        height: 5px;
-        background: var(--primary-color);
+        height: 4px;
+        background: var(--white-color);
         margin-bottom: 8px;
         border-radius: 0;
         position: relative;
@@ -3693,7 +3898,7 @@ a.prev.page-numbers {
     .toggled .menu-toggle span:nth-child(1) {
         transform: rotate(45deg);
         position: relative;
-        top: 13px;
+        top: 11px;
     }
     .toggled .menu-toggle span:nth-child(2) {
         opacity: 0;
@@ -3732,11 +3937,33 @@ a.prev.page-numbers {
     }
     .main-navigation ul {
         text-align: left;
-        display: inline-block;
+        display: block;
+    }
+    .head-wp {
+        padding: 0;
+    }
+    .main-navigation:after,
+    .main-navigation:before {
+        content: none;
+    }
+    .site-header,
+    .main-nav {
+        height: 80px;
+    }
+    .main-nav .container,
+    .main-nav .container .head-wp,
+    .main-nav .container .head-wp .row,
+    .main-nav .container .head-wp .row .header-menu,
+    .main-nav .container .head-wp .row .header-menu .main-navigation {
+        height: 100%;
     }
     .main-navigation ul li {
         display: block;
+        float: none;
+        text-align: left;
+        height: auto;
         margin-left: 0;
+        padding: 0;
         font-size: 22px;
         line-height: 28px;
         margin-bottom: 4.4vh;
@@ -3747,9 +3974,13 @@ a.prev.page-numbers {
     .main-navigation ul li a {
         font-size: 22px;
         line-height: 28px;
+        justify-content: left;
         padding-top: 0;
         padding-bottom: 9px;
         color: var(--white-color);
+    }
+    .main-navigation .logo {
+        display: none;
     }
     .main-navigation ul li.menu-item-has-children>a:after {
         top: 45%;
@@ -3785,6 +4016,98 @@ a.prev.page-numbers {
     .main-navigation ul ul li a {
         padding: 0;
     }
+    .main-banner {
+        padding: 240px 0 200px;
+    }
+    .h1-title {
+        font-size: 65px;
+    }
+    .banner-content {
+        margin: 0;
+    }
+    .main-service-sec .service-row .service-img-wp,
+    .career-img {
+        height: 550px;
+        left: 0;
+    }
+    .service-img {
+        float: unset;
+        width: 100%;
+    }
+    .main-service-sec {
+        margin-top: 0;
+        padding-top: 60px;
+        clip-path: unset;
+    }
+    .site-wrap {
+        clip-path: unset;
+    }
+    .service-row.even:after {
+        content: none;
+    }
+    .service-row.even {
+        padding-bottom: 100px;
+    }
+    .service-row.odd {
+        margin: 0;
+        padding-top: 140px;
+        padding-bottom: 125px;
+    }
+    .service-row.even:before {
+        bottom: -110px;
+    }
+    .main-service-sec .service-row .service-content {
+        padding: 40px 0 0 0;
+    }
+    .service-text .sec-btn {
+        margin-top: 20px;
+    }
+    .gallery-section {
+        padding-top: 270px;
+        padding-bottom: 150px;
+    }
+    .career-section {
+        margin: 0;
+        padding-top: 80px;
+    }
+    .career-img .bg-img {
+        float: unset;
+        width: 100%;
+    }
+    .career-content {
+        padding: 50px 0 0 0;
+    }
+    .apprentice-section {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        margin-top: 80px;
+        /* clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0 100%, 0% 30%); */
+    }
+    .site-wrap:before {
+        content: none;
+    }
+    .purpose {
+        padding: 280px 0 80px 0;
+    }
+    .site-branding.footer-branding {
+        width: 250px;
+        height: 138px;
+        margin: auto;
+        left: 0;
+    }
+    .site-contact ul {
+        flex-direction: column;
+    }
+    .site-contact ul li {
+        margin: 0 0 40px 0;
+    }
+    .top-footer {
+        clip-path: polygon(100% 0, 100% 81%, 50% 100%, 0 81%, 0 0%);
+        padding: 270px 0 100px 0;
+    }
+    .banner-text p:not(.inner-banner-content p) {
+        font-size: 20px;
+    }
     .footer-bottom-text,
     .copy-right,
     .footer-other-link,
@@ -3794,6 +4117,9 @@ a.prev.page-numbers {
     }
     .footer-bottom-link {
         margin: 15px 0;
+    }
+    .main-navigation a:before {
+        content: none;
     }
 }
 
@@ -3808,6 +4134,9 @@ a.prev.page-numbers {
     .modal-dialog {
         max-width: unset;
         width: calc(100vw - 60px);
+    }
+    .service-row.odd {
+        clip-path: polygon(50% 0, 100% 165px, 100% 975px, 50% 100%, 0 975px, 0 165px);
     }
 }
 
@@ -3840,6 +4169,58 @@ a.prev.page-numbers {
     }
     .page-numbers li {
         margin-bottom: 10px;
+    }
+    .container {
+        padding: 0 30px;
+        width: 100vw;
+        max-width: 100%;
+    }
+    .h1-title {
+        font-size: 9.8vw;
+        word-break: break-word;
+    }
+    .h2-title {
+        font-size: 38px;
+    }
+    .main-banner {
+        padding: 200px 0 160px;
+    }
+    .banner-btn .sec-btn+.sec-btn {
+        margin: 20px 0 0 0;
+    }
+    .banner-btn {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .main-service-sec .service-row .service-img-wp,
+    .career-img {
+        height: 450px;
+    }
+    .main-service-sec {
+        padding-top: 40px;
+    }
+    .service-row.even {
+        padding-bottom: 80px;
+    }
+    .gallery-section {
+        padding-top: 250px;
+    }
+    .service-row.odd {
+        clip-path: polygon(50% 0, 100% 165px, 100% 885px, 50% 100%, 0 885px, 0 165px);
+        padding-top: 100px;
+    }
+    .footer-bottom-link ul li:first-child {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 16px 0;
+        padding: 0;
+        border-right: 0;
+    }
+    .site-contact ul li span.icon {
+        margin-right: 20px;
+    }
+    .banner-text p:not(.inner-banner-content p) {
+        font-size: 16px;
     }
 }
 
@@ -3879,6 +4260,20 @@ a.prev.page-numbers {
     .common-popup-text {
         padding: 20px 15px !important;
         max-height: 75vh;
+    }
+    .main-banner {
+        padding: 170px 0 110px;
+    }
+    .main-service-sec .service-row .service-img-wp,
+    .career-img {
+        height: 370px;
+    }
+    .h2-title {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+    .service-row.odd {
+        clip-path: polygon(50% 0, 100% 165px, 100% 780px, 50% 100%, 0 780px, 0 165px);
     }
 }
 

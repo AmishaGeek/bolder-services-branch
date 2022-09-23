@@ -60,6 +60,15 @@ jQuery(document).ready(function($) {
             }
         ]
     });
+    jQuery().fancybox({
+        selector: '.gallery-slider a',
+        "afterShow": function() {
+            jQuery('.gallery-slider').slick('slickPause');
+        },
+        "afterClose": function() {
+            jQuery('.gallery-slider').slick('slickPlay');
+        }
+    });
 
 
     /* FAQ Page accordion */
@@ -190,18 +199,17 @@ jQuery(document).ready(function($) {
     });
 
     /* Mobile Menu JS */
-    // jQuery("#menu-item-21 a").first().attr('href', 'javascript:void(0);');
-    jQuery("#main-menu .menu-item a").click(function() {
+    jQuery("#primary-menu .menu-item a").click(function() {
         jQuery("#site-navigation").removeClass("toggled");
     });
 
     /*Quote Modal JS */
-    jQuery("#quoteModal").on('show.bs.modal', function() {
+    jQuery("#career").on('show.bs.modal', function() {
         var scrolly = window.scrollY;
         jQuery("body").css("top", "-" + scrolly + "px");
         jQuery(this).attr("data-top", scrolly);
     });
-    jQuery('#quoteModal').on('hidden.bs.modal', function() {
+    jQuery('#career').on('hidden.bs.modal', function() {
         var scrolly = jQuery(this).attr("data-top");
         jQuery("body").css("top", "0px");
         window.scrollTo(0, scrolly);
