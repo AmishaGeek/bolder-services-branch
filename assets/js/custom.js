@@ -1,31 +1,12 @@
 jQuery(document).ready(function($) {
-
+    jQuery('.wpcf7-form input[name="user-resume"]').change(function(e) {
+        var name_of_file = e.target.files[0].name;
+        jQuery('.input-file-text').text(name_of_file);
+    });
     var window_size = jQuery(window).width();
     new WOW().init();
     var currentRequest = null;
-    jQuery(".gallery-tab li").on("click", function() {
-        var slug = jQuery(this).attr('data-id');
-        jQuery(".gallery-tab li").removeClass('active-gallery-tab');
-        jQuery(this).addClass('active-gallery-tab');
-        jQuery(".gallery-loader").css("display", "flex");
 
-        currentRequest = $.ajax({
-            type: 'POST',
-            url: custom_call.ajaxurl,
-            data: {
-                'action': 'gallery_tabbing',
-                'id': slug,
-            },
-            dataType: 'text',
-            success: function(data) {
-                console.log(data);
-                jQuery(".main-slider").slick('unslick');
-                jQuery(".gallery-box").html(data);
-                jQuery(".gallery-loader").css("display", "none");
-                gallery_slider();
-            }
-        });
-    });
     jQuery('.gallery-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,

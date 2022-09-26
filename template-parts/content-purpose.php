@@ -1,6 +1,6 @@
 <div class="site-wrap">
 
-    <section class="main-banner inner-banner inner-banner-shape" style="background-image: url('<?php the_field('banner_image'); ?>');">
+    <section class="main-banner inner-banner inner-banner-shape sec-1920" style="background-image: url('<?php the_field('banner_image'); ?>');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
