@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-<section class="main-banner inner-banenr rest-banner" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/09/banner-img-min.jpg');">
+<section class="main-banner inner-banenr rest-banner sec-1920" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/09/banner-img-min.jpg');">
 	<div class="sec-wp">
 		<div class="container">
 			<div class="row">

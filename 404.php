@@ -10,12 +10,12 @@
 get_header();
 ?>
 <!-- Banner Start -->
-<section class="main-banner inner-banner">
+<section class="main-banner inner-banner rest-banner sec-1920" style=" background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/09/banner-img-min.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<div class="banner-content">
-					<h1 class="h1-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bolder-services' ); ?></h1>
+					<h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bolder-services' ); ?></h1>
 				</div>
 			</div>
 		</div>
@@ -28,7 +28,7 @@ get_header();
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<img width="1200" height="937" src="<?php echo home_url(); ?>/wp-content/themes/redeluxe/assets/images/404.png" alt="404 Not Found!">
+				<img width="1200" height="937" src="<?php echo home_url(); ?>/wp-content/themes/bolder-services/assets/images/404.svg" width="570" height="484" alt="404 Not Found!">
 			</div>
 		</div>
 	</div>

@@ -84,8 +84,8 @@
 									<!-- <li>© <?php echo date('Y'); ?> </li> -->
 									<li>Bolder Services, LLC</li>
 									<li><a href="<?php echo home_url(); ?>/privacy-policy" title="Privacy Policy">Privacy Policy</a></li>
-									<li><a href="<?php echo home_url(); ?>/terms-of-use" title="Terms of Service">Terms of Service</a></li>
-									<li><a href="<?php echo home_url(); ?>/cookie-policy" title="Cookies Policy">Cookies Policy</a></li>
+									<li><a href="<?php echo home_url(); ?>/terms-of-use" title="Terms of Service">Terms of Use</a></li>
+									<li><a href="<?php echo home_url(); ?>/cookie-policy" title="Cookies Policy">Cookie Policy</a></li>
 								</ul>
 							</div>
 							<div class="footer-other-link">
@@ -99,35 +99,15 @@
 	</div>
 	<!-- Footer End -->
 </footer>
-<!-- CTA Button -->
-<div class="cta-btn">
-	<a href="tel:<?php echo $phone_link; ?>" class="cta-wp sec-btn" title="Call <?php echo $phone; ?>">
-		<span>Call</span> <span class="callus"><?php echo $phone; ?></span>
-	</a>
-</div>
+	<!-- CTA Button -->
+	<div class="cta-btn">
+		<a href="tel:<?php echo $phone_link; ?>" class="cta-wp sec-btn" title="Call <?php echo $phone; ?>">
+			<span>Call</span> <span class="callus"><?php echo $phone; ?></span>
+		</a>
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
-
-
-<!-- Careers Form -->
-<!-- <div class="modal fade" id="career">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			<div class="modal-body overflow-text" data-simplebar="">
-				<h5 class="modal-title h3-title">Apply Now</h5>
-				<p>Fill out the form below and attach your resume and we will get back to you!</p>
-				<div class="contact-form">
-					<?php echo do_shortcode('[contact-form-7 id="49" title="Apply Now"]'); ?>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
 
 <div class="modal fade common-popup" id="career">
 	<div class="modal-dialog" role="document">

@@ -202,6 +202,7 @@ function change_html_custom_logo() {
             esc_url( home_url( '/' ) ),
             wp_get_attachment_image( $custom_logo_id, 'full', false, array(
                 'class'    => 'custom-logo',
+				'alt'	   => 'Logo'
             ) )
         );
     return $html;   

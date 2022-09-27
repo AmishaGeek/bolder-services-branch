@@ -18,7 +18,9 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<link rel="preload" href="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+	<link rel="preload" href="<?php echo home_url() ?>/wp-content/themes/bolder-services/assets/fonts/DMSerifDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin="">
 	<?php wp_head(); ?>
 </head>
 
@@ -65,9 +67,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="site-branding for-mob">
-									<?php
-									the_custom_logo();
-									?>
+									<?php the_custom_logo(); ?>
 								</div>
 								<div class="header-menu">
 									<nav id="site-navigation" class="main-navigation">

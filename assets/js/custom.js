@@ -51,111 +51,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-
-    /* FAQ Page accordion */
-    jQuery('.accordion .faq-content').hide();
-    jQuery('.accordion > div:eq(0) h3').addClass('active-faq');
-    jQuery('.accordion > div:eq(0) .faq-content').slideDown();
-
-    jQuery('.accordion h3').click(function(j) {
-        var dropDown = jQuery(this).closest('div').find('.faq-content');
-        jQuery(this).closest('.accordion').find('.faq-content').not(dropDown).slideUp();
-        if (jQuery(this).hasClass('active-faq')) {
-            jQuery(this).removeClass('active-faq');
-        } else {
-            jQuery(this).closest('.accordion').find('h3.active-faq').removeClass('active-faq');
-            jQuery(this).addClass('active-faq');
-        }
-        dropDown.stop(false, true).slideToggle();
-        j.preventDefault();
-    });
-
-
-
-    jQuery('.plans-slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
-        responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
-                }
-            }
-        ]
-    });
-    jQuery('.review-slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
-        responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-                autoplay: true,
-                autoplaySpeed: 2000,
-            }
-        }]
-    });
-
-
-
-    setTimeout(function() {
-        jQuery("#sbi_images").slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            draggable: true,
-            rows: 1,
-            swipeToSlide: true,
-            dots: false,
-            arrows: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            infinite: true,
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
-            responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    arrows: false,
-                    rows: 1,
-                }
-            }]
-        });
-    }, 1000);
-
-
     /* Scroll To Top JS */
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > 100) {
@@ -196,58 +91,12 @@ jQuery(document).ready(function($) {
         window.scrollTo(0, scrolly);
     });
 
-    /* SEO Page Read More JS */
-    jQuery('#read-more').click(function() {
-        jQuery('.excerpt-content').css({ 'max-height': 'unset' });
-        jQuery(this).hide();
-    });
-
-    /*SEO Menu JS */
-    jQuery('#view_all_services').click(function() {
-        jQuery('.all-services').slideToggle(500);
-        jQuery('.all-services').css('display', 'block');
-    });
-
-
 });
-/* Gallery Slider */
-function gallery_slider() {
-    jQuery('.main-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: false,
-        arrows: false,
-        draggable: false,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
-        responsive: [{
-            breakpoint: 992,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-        }]
-    });
-}
 
 /* Window Load and Resize JS */
 jQuery(window).on('load resize', function() {
     var window_size = jQuery(window).width();
     if (window_size <= 991) {
-
-        jQuery('body').on('click', '#primary-menu .menu-item-has-children', function() {
-            if ((jQuery(this).hasClass('active-sub-menu'))) {
-                jQuery(this).removeClass('active-sub-menu');
-                jQuery(this).find('.sub-menu').css('display', 'none');
-            } else {
-                jQuery(".menu-item-has-children").removeClass('active-sub-menu');
-                jQuery(".sub-menu").css('display', 'none');
-                jQuery(this).addClass('active-sub-menu');
-                jQuery(this).find('.sub-menu').css('display', 'block');
-            }
-        });
-
         /* Scroll To Top JS */
         jQuery(window).scroll(function() {
             if (jQuery(this).scrollTop() > 100) {
@@ -256,30 +105,5 @@ jQuery(window).on('load resize', function() {
                 jQuery('.cta-wp').fadeOut();
             }
         });
-
-        jQuery('.say-about-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: false,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
-            responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    arrows: true,
-                }
-            }]
-        });
-
-    } else {
-        jQuery('.say-about-slider').slick('destroy');
     }
 });

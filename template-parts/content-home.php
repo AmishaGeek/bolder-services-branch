@@ -49,8 +49,8 @@
                     <section class="service-row odd sec-1920">
                         <div class="container">
                             <div class="row align-items-center">
-                                <div class="col-lg-6 order-lg-1 order-2 wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                                    <div class="service-content">
+                                <div class="col-lg-6 order-lg-1 order-2">
+                                    <div class="service-content wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                         <h2 class="h2-title"><?php the_sub_field('service_title'); ?></h2>
                                         <div class="service-text">
                                                 <?php the_sub_field('service_content'); ?>
@@ -58,8 +58,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 order-lg-2 order-1 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                                    <div class="service-img-wp">
+                                <div class="col-lg-6 order-lg-2 order-1">
+                                    <div class="service-img-wp wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                         <div class="service-img bg-img" style="background-image: url('<?php the_sub_field('service_image'); ?>');"></div>
                                     </div>
                                 </div>
@@ -68,18 +68,18 @@
                     </section>
                 <?php  else: ?>
                     <section class="service-row even sec-1920">
-                        <div class="for-mob wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.1s">
+                        <div class="for-mob wow fadeup-animation animated" data-wow-duration="0.8s" data-wow-delay="0.2s">
                             <span class="sub-title">Our Services</span>
                         </div>
                         <div class="container">
                             <div class="row align-items-center">
-                                <div class="col-lg-6 wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                                    <div class="service-img-wp">
+                                <div class="col-lg-6">
+                                    <div class="service-img-wp wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                         <div class="service-img bg-img" style="background-image: url('<?php the_sub_field('service_image'); ?>');"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="service-content">
+                                    <div class="service-content wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                                         <h2 class="h2-title"><?php the_sub_field('service_title'); ?></h2>
                                         <div class="service-text">
                                             <?php the_sub_field('service_content'); ?>
@@ -133,12 +133,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="career-img">
+                <div class="career-img wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <div class="bg-img" style="background-image: url('<?php the_field('careers_image'); ?>');"></div>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="career-content">
+                <div class="career-content wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <h2 class="h2-title"><?php the_field('careers_title'); ?></h2>
                     <div class="career-text">
                         <?php the_field('careers_content'); ?>

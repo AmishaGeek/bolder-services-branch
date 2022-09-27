@@ -15,12 +15,12 @@
 get_header();
 ?>
 <!-- Banner Start -->
-<section class="main-banner inner-banner">
+<section class="main-banner inner-banner rest-banner sec-1920" style=" background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2022/09/banner-img-min.jpg');">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<div class="banner-content">
-					<h1 class="h1-title"><?php the_title(); ?></h1>
+					<h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s"><?php the_title(); ?></h1>
 				</div>
 			</div>
 		</div>

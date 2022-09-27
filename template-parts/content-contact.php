@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="banner-content inner-banner-content white-text">
-                        <h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.2s"><?php the_title(); ?></h1>
-                        <div class="banner-text wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                    <div class="banner-content inner-banner-content white-text wow left-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
+                        <h1 class="h1-title"><?php the_title(); ?></h1>
+                        <div class="banner-text">
                             <?php the_field('banner_content'); ?>
                         </div>
                         <div class="contact-main">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="contact-form">
+                    <div class="contact-form wow right-animation" data-wow-duration="0.8s" data-wow-delay="0.2s">
                         <?php echo do_shortcode('[contact-form-7 id="35" title="Contact Us"]'); ?>
                     </div>
                 </div>
