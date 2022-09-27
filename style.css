@@ -4062,7 +4062,7 @@ a.prev.page-numbers {
         left: 100vw;
         width: 100vw;
         height: 100vh;
-        background: var(--dark-color);
+        background: var(--primary-color);
         padding: 16.3vh 30px 30px 30px;
         overflow: auto;
         opacity: 0;
@@ -4321,6 +4321,9 @@ a.prev.page-numbers {
         left: 0;
         height: 100%;
     }
+    .page-template-template-services .apprentice-section {
+        margin: 90px 0 0 0;
+    }
     .service-cards-wp {
         grid-template-columns: 1fr;
         grid-gap: 0;
@@ -4375,7 +4378,7 @@ a.prev.page-numbers {
     .contact-us-banner .site-contact ul {
         align-items: center;
     }
-    .contact-form {
+    .contact-form:not(.modal-content .contact-form) {
         margin-top: 80px;
     }
     .main-banner.inner-banner.inner-banner-shape.contact-us-banner {
@@ -4387,7 +4390,8 @@ a.prev.page-numbers {
         clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
     }
     .page-template-template-nosidebar .footer-path,
-    .error404 .footer-path {
+    .error404 .footer-path,
+    .single-post .footer-path {
         top: -15px;
         clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
     }
@@ -4396,6 +4400,9 @@ a.prev.page-numbers {
     }
     .page-template-template-nosidebar .top-footer:after {
         top: 26px;
+    }
+    .single-post .top-footer:after {
+        top: 45px;
     }
     .error404 .top-footer:after {
         top: 45px;
